@@ -1,0 +1,110 @@
+Q1)
+
+You are tasked with developing a Message Printing System using Spring Core. The system should print a simple message to the console.Use only the @Component annotation for Spring-managed beans.
+
+Requirements:
+
+MessageService Class:
+This class will be the only Spring-managed bean and should be annotated with @Component.
+Method:
+void printMessage(): This method should print a message like "Hello, Spring Core!" to the console.
+
+AppConfig Class:
+This class should be annotated with @Configuration and use @ComponentScan to automatically scan and manage beans in the application.
+
+Main Class:
+This class should initialize the Spring application context and retrieve the MessageService bean.
+Inside main(-) method, fetch the MessageService bean from the Spring context and call the printMessage() method.
+
+
+Expected Output:
+-------------
+
+Hello, Spring Core!
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q2)
+
+You are tasked with creating a Greeting Application using Spring Core. The application should print personalized greetings based on user input. The system will have only one bean class, one configuration class, and one main class, utilizing only the @Component annotation for Spring-managed beans.
+
+Requirements:
+
+Greeting Class: This class should be annotated with @Component to be managed by the Spring container.
+Attributes:
+String userName: A string representing the user's name (can be passed as an argument).
+Method:
+void greetUser(String userName): This method should print a personalized greeting like "Hello, <userName>!" to the console.
+
+AppConfig Class:
+This class should be annotated with @Configuration and use @ComponentScan to automatically scan for Spring beans.
+
+Main Class: This class should initialize the Spring application context and retrieve the Greeting bean.
+Method:
+Inside main method, fetch the GreetingService bean from the Spring context and call the greetUser() method with a user name passed as an argument (e.g., "Roshan").
+
+
+Expected Output:
+--------------
+Hello, Roshan!
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q3)
+You are tasked with developing a simple calculator application using Spring Core, where the operations of addition, subtraction, multiplication, and division are handled by a CalculatorService component.
+
+Requirements:
+Calculator Class:
+Implement the following methods:
+double add(double a, double b): This method should return the sum of a and b.
+double subtract(double a, double b): This method should return the difference between a and b.
+double multiply(double a, double b): This method should return the product of a and b.
+double divide(double a, double b): This method should return the quotient of a divided by b.
+
+AppConfig Class:
+This class should use @ComponentScan to scan for Spring-managed components within the application.
+
+Main Class:
+Demonstrate the functionality of the Calculator by performing all four operations (addition, subtraction, multiplication, and division).
+
+Expected Output:
+----------
+Addition: 5 + 3 = 8.0
+Subtraction: 5 - 3 = 2.0
+Multiplication: 5 * 3 = 15.0
+Division: 6 / 3 = 2.0
+
+
+============================================================================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

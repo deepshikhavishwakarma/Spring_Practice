@@ -1,0 +1,94 @@
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+Q1)
+-----
+You are tasked with developing a simple application that demonstrates constructor-based dependency injection using Spring Core and the @Autowired annotation. The goal of this application is to inject an Employee object into an EmployeeService class, which will handle displaying the employee’s details.
+
+Requirements:
+Employee Class:
+Attributes:
+String name: Represents the employee's name.
+String department: Represents the department in which the employee works.
+Create a No arg constructor and All arg constructor.
+Create getters and setters for attributes name and department.
+Method:
+void displayEmployeeInfo(): This method should print the employee’s name and department to the console.
+
+EmployeeService Class:
+Attributes:
+Employee employee: Represents the injected Employee object.
+Constructor:
+Use @Autowired to inject the Employee object into the EmployeeService via its constructor.
+Method:
+void showEmployeeDetails(): This method should call the displayEmployeeInfo() method of the Employee object to display the employee's details.
+
+AppConfig Class:
+Annotations:
+Use @Configuration and @ComponentScan to enable Spring’s automatic bean management and component scanning.
+Bean Definition:
+
+Main Class:
+
+Create a main class that:
+Loads the Spring context using AnnotationConfigApplicationContext.
+Retrieves the Employee bean from the context and initialize the properties through setter method.
+Retrieves the EmployeeService bean from the context.
+Calls the showEmployeeDetails() method to display the employee's information.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q2)
+----
+You are tasked with creating a Spring-based
+application to demonstrate constructor-based dependency
+injection using Spring Core. The application should involve
+a Student class that depends on an Address class. The Address
+ object should be injected into the Student class via
+  constructor injection.
+
+Requirements:
+Address Class (Dependent Class)
+
+Attributes:
+String city: The city where the student lives.
+String state: The state where the student lives.
+Methods:
+void displayAddress(): This method should print the city and state details.
+
+Student Class (Target Class)
+Attributes:
+String name: The name of the student.
+int rollNumber: The roll number of the student.
+Address address: The Address object, which will be injected via constructor injection.
+Methods:
+void displayStudentDetails(): This method should print the student's name, roll number, and address details.
+
+AppConfig Class
+A Spring configuration class that uses @ComponentScan to scan and configure the required components.
+
+MainApp Class
+In the MainApp class, retrieve the Student bean from the Spring context.
+Set the name and rollNumber attributes for the Student object.
+Set the city and state for the Address object in the MainApp class.
+Call the displayStudentDetails() method to display all the details.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q3)
+------
+You are tasked with developing a Spring Core application that demonstrates basic constructor-based dependency injection using @Autowired.
+
+Requirements:
+Employee Class:
+Create an Employee class with the following attributes:
+int id: id of the employee.
+String name: The name of the employee.
+LocalDate joiningDate: The employee's joining date.
+
+Add a constructor with argument as (LocalDate joiningDate) and use @Autowired for constructor injection.
+
+AppConfig Class:
+Define a configuration class that creates a LocalDate bean representing today's date using @Bean and inject it into the Employee class.
+
+Main Class:
+Create a main method that loads the Spring application context, retrieves the Employee bean, and set id and name through setter method and prints the employee details, including the joining date.
+
