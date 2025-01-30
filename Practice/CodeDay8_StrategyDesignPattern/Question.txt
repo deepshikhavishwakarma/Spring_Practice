@@ -22,7 +22,7 @@ private SortingStrategy strategy: A reference to the current sorting strategy.
 Methods:
 void setStrategy(SortingStrategy strategy): Sets the sorting strategy.
 void executeSort(int[] numbers): Uses the current strategy to sort and print the numbers.
-
+;
 AppConfig Class:
 Configure Spring using @ComponentScan to manage the beans.
 
