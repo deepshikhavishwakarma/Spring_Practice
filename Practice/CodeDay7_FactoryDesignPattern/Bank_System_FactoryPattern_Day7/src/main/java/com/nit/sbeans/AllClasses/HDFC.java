@@ -29,9 +29,10 @@ public class HDFC implements Bank {
             amount-=amt;
         }else {
             try{
-                throw new InsufficientBalanceException();
+                throw new InsufficientBalanceException("Insufficient Balance : "+ amount);
             }catch (Exception | InsufficientBalanceException e){
                 e.printStackTrace();
+
             }
         }
         return amount+" withdraw Successfully .";
@@ -39,6 +40,6 @@ public class HDFC implements Bank {
 
     @Override
     public String toString() {
-        return "Current Balance is Rs . "+amount;
+        return "Bank Name: "+this.getClass().getSimpleName()+"Current Balance is Rs . "+amount;
     }
 }
