@@ -1,0 +1,92 @@
+Q1)
+You are tasked with developing a Spring Core application that uses the Factory Design Pattern to create different types of vehicles. The application should define an interface for vehicles and provide concrete implementations for various vehicle types.
+
+Requirements:
+Vehicle Interface:
+
+Create a Vehicle interface that declares a method:
+void drive();
+This method will print a message indicating the vehicle being driven.
+Concrete Classes for Vehicles:
+
+Implement the following classes:
+Car: Implements the Vehicle interface and prints "Driving a Car" when drive() is called.
+Bike: Implements the Vehicle interface and prints "Riding a Bike" when drive() is called.
+Truck: Implements the Vehicle interface and prints "Driving a Truck" when drive() is called.
+
+VehicleFactory Class:
+
+Create a VehicleFactory class that has a method:
+Vehicle createVehicle(String vehicleType):
+This method will return an instance of the corresponding vehicle based on the input string ("car", "bike", or "truck").
+
+AppConfig Class:
+Define a configuration class that uses @ComponentScan to automatically discover and register components, including VehicleFactory.
+
+Main Class:
+Create a main class that:
+Loads the Spring application context,
+Retrieves the VehicleFactory bean,
+Uses the factory to create different vehicle instances and calls their drive() method.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q2)
+
+You are tasked with developing a Spring Core application that utilizes the Factory Design Pattern to create different types of shapes. The application should define an interface for shapes and provide concrete implementations for various shape types.
+
+Requirements:
+Shape Interface:
+Create a Shape interface that declares a method:
+void draw();
+
+Concrete Classes for Shapes:
+Implement the following classes:
+Circle: Implements the Shape interface and prints "Drawing a Circle" when draw() is called.
+Square: Implements the Shape interface and prints "Drawing a Square" when draw() is called.
+Rectangle: Implements the Shape interface and prints "Drawing a Rectangle" when draw() is called.
+
+ShapeFactory Class:
+Create a ShapeFactory class that has a method:
+Shape createShape(String shapeType):
+This method will return an instance of the corresponding shape based on the input string ("circle", "square", or "rectangle").
+
+AppConfig Class:
+Define a configuration class that uses @ComponentScan to automatically discover and register components, including ShapeFactory.
+
+Main Class:
+Create a main class that:
+Loads the Spring application context,
+Retrieves the ShapeFactory bean,
+Uses the factory to create different shape instances and calls their draw() method.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q3)
+
+You are tasked with developing a Spring Core application that produces different types of food items (Pizza and Burger) using the Factory Design Pattern.
+
+Requirements:
+
+Food Interface:
+Create a Food interface with the following method:
+String serve(): This method should return a string describing the food item being served.
+
+Concrete Classes:
+Pizza Class:
+Implements the Food interface and returns "Serving Pizza" when serve() is called.
+Burger Class:
+Implements the Food interface and returns "Serving Burger" when serve() is called.
+
+FoodFactory Class:
+Create a FoodFactory class with a method:
+Food createFood(String type): This method returns a Food object based on the input type (e.g., "pizza" or "burger").
+
+AppConfig Class:
+Create a configuration class annotated with @Configuration to enable component scanning.
+
+Main Class:
+Create a main class that:
+Loads the Spring application context.
+Uses the FoodFactory to create a food item based on user input.
+Prints the output from the serve() method of the food item.

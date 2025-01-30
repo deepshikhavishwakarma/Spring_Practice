@@ -1,0 +1,65 @@
+Q1)
+
+TimePrinter Using Field Injection with @Autowired
+You are tasked with developing a Spring Core application that prints the current time using field-based dependency injection. The application will make use of the LocalTime class (a predefined class in Java) to demonstrate the field injection of a LocalTime object using the @Autowired annotation.
+
+Requirements:
+TimePrinter Class:
+Attributes:
+LocalTime currentTime: This will store the current time.
+Use @Autowired on the currentTime field to allow for field-based injection using Spring.
+Implement a printTime() method that prints the current time in the format HH:mm:ss.
+2. AppConfig Class:
+Define a configuration class that declares a TimePrinter bean.
+In the configuration class, inject LocalTime.now() into the currentTime field of the TimePrinter bean using field-based injection.
+
+Main Class:
+Create a main class that loads the Spring application context, retrieves the TimePrinter bean, and prints the current time.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Q2)
+
+Season Finder
+You are tasked with developing a Spring Core application that determines the season based on the current month. This application will use field-based dependency injection to inject the necessary components.
+Requirements:
+SeasonFinder Class:
+Attributes:
+String currentSeason: This will store the current season.
+Use @Autowired to inject a LocalDate object.
+Methods:
+findSeason(): Determines the season based on the current month and assigns it to currentSeason.
+printSeason(): Prints the current season.
+
+AppConfig Class:
+Create a bean for LocalDate using the @Bean annotation.
+
+Main Class:
+Loads the Spring application context, retrieves the SeasonFinder bean, and prints the current season.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q3)
+
+Age Calculator
+
+You are tasked with developing a Spring Core application that calculates the age based on a given birth date. This application will utilize field-based dependency injection.
+
+Requirements:
+AgeCalculator Class:
+Attributes:
+int age: This will store the calculated age.
+Use @Autowired to inject a LocalDate object representing the birth date.
+Methods:
+calculateAge(): Calculates the age based on the current date and the birth date.
+printAge(): Prints the calculated age.
+
+AppConfig Class:
+Create a bean for the birthdate():returnType- LocalDate:  using the @Bean annotation.
+=>inside the birthdate() return LocalDate.of(YYYY-MM-DD).
+
+Main Class:
+Loads the Spring application context, retrieves the AgeCalculator bean, and prints the calculated age.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
