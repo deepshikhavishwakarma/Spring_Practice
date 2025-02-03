@@ -1,0 +1,75 @@
+Q1)
+
+You are tasked with developing a Shopping Cart Discount System using Java, Spring Core, and the Strategy Design Pattern. The system should allow applying different discount strategies to a shopping cart based on the type of customer (Regular, Premium, VIP) and the total value of the cart. The discount calculation logic must be extensible, allowing the system to add new discount types in the future.
+
+Requirements:
+DiscountStrategy Interface:
+Methods:
+double applyDiscount(double totalAmount): Applies a discount to the total amount of the cart and returns the new discounted amount.
+
+NoDiscount Class:Implements DiscountStrategy.
+For regular customers, no discount is applied. It returns the original totalAmount without any changes.
+
+PremiumDiscount Class:Implements DiscountStrategy.
+For premium customers, apply a 10% discount. Returns the discounted amount after applying the discount.
+
+VIPDiscount Class:Implements DiscountStrategy.
+For VIP customers, apply a 20% discount. Returns the discounted amount after applying the discount.
+
+ShoppingCart Class:
+Attributes:
+List<Item> items: A list of items in the cart.
+DiscountStrategy discountStrategy: The current discount strategy to be used for applying discounts.
+Methods:
+void addItem(Item item): Adds an item to the cart.
+double calculateTotal(): Calculates the total value of the cart before applying discounts.
+double applyDiscount(): Applies the currently set discount strategy to the cart total and returns the final price.
+void setDiscountStrategy(DiscountStrategy discountStrategy): Sets the discount strategy for the cart.
+void displayItems(): Displays the Cart Item.
+
+Item Class:
+Attributes:
+String name: The name of the item.
+double price: The price of the item.
+Methods:
+Constructor and getter methods for attributes.
+
+Customer Class:
+Attributes:
+String name: The name of the customer.
+String type: The type of the customer (Regular, Premium, VIP).
+Methods:
+Constructor and getter methods for attributes.
+DiscountFactory Interface:
+
+Methods:
+DiscountStrategy getDiscountStrategy(String customerType): Returns the appropriate DiscountStrategy based on the customer type.
+
+ConcreteDiscountFactory Class:
+
+Implements DiscountFactory.
+Uses Spring's @Autowired to inject the available discount strategies.
+Returns the correct discount strategy based on the customer type.
+
+AppConfig Class:
+
+Configures Spring to manage beans using @Configuration and @ComponentScan.
+
+Main Class (ShoppingSystem):
+Uses DiscountFactory to obtain the appropriate DiscountStrategy based on the customer type.
+Demonstrates adding items, calculating totals, applying discounts, and displaying final amounts.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
